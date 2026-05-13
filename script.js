@@ -24,3 +24,34 @@ menuIcon.onclick = () => {
     menuIcon.classList.toggle('bx-x');
     navbar.classList.toggle('active');
 };
+
+navLinks.forEach(link => {
+    link.onclick = () => {
+        menuIcon.classList.remove('bx-x');
+        navbar.classList.remove('active');
+    }
+});
+
+const observer = new IntersectionObserver((entries) => {
+
+    entries.forEach((entry) => {
+
+        if(entry.isIntersecting){
+            entry.target.classList.add('show');
+        }
+
+    });
+
+});
+
+const hiddenElements = document.querySelectorAll('.hidden');
+
+hiddenElements.forEach((el) => observer.observe(el));
+
+let header = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+
+    header.classList.toggle('sticky', window.scrollY > 100);
+
+});
