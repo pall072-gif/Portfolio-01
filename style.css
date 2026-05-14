@@ -630,84 +630,54 @@ span{
     backdrop-filter: blur(15px);
     box-shadow: 0 0 20px rgba(0,255,238,0.2);
 }
-
-
-
-
-@media (max-width:768px){
-
-/* Header */
-.header{
-    padding:2rem 5%;
+@media (max-width: 768px) {
+    .timeline-items::before { left: 7px; } /* Move line to the side */
+    .timeline-item { padding-left: 40px !important; text-align: left !important; }
+    .timeline-dot { left: 0; }
 }
 
-#menu-icon{
-    display:block;
+@media (max-width: 768px) {
+    /* Make the Testimonials stack like a tower */
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the Services stack like a tower */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the service boxes grow if the text is long */
+    .service-box {
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    /* Make the Testimonials stack like a tower */
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the Services stack like a tower */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the service boxes grow if the text is long */
+    .service-box {
+        height: auto;
+    }
+    /* Make the form inputs take up the whole width */
+    .contact form .input-box {
+        width: 100%;
+    }
+
+    /* Make the message box fit perfectly */
+    .contact form textarea {
+        min-width: 100%;
+    }
 }
 
-.navbar{
-    position:absolute;
-    top:100%;
-    right:-100%;
-    width:70%;
-    background:#111;
-    display:flex;
-    flex-direction:column;
-    padding:2rem;
-    transition:.4s;
-    border-left:2px solid var(--main-color);
-}
 
-.navbar.active{
-    right:0;
-}
 
-.navbar a{
-    display:block;
-    margin:1.5rem 0;
-    font-size:2rem;
-}
 
-/* HOME FIX */
-.home{
-    display:flex;
-    flex-direction:column-reverse; /* image first */
-    align-items:center;
-    text-align:center;
-    gap:3rem;
-    padding-top:12rem;
-}
-
-.home-content{
-    order:2;
-}
-
-.home-img{
-    order:1;
-}
-
-.home-img img{
-    width:22rem;
-    height:22rem;
-    margin-bottom:1rem;
-}
-
-.home-content h1{
-    font-size:4rem;
-}
-
-.home-content h3{
-    font-size:2.2rem;
-}
-
-.social-icons{
-    display:flex;
-    justify-content:center;
-    flex-wrap:wrap;
-}
-
-.btn-group{
-    justify-content:center;
-    flex-wrap:wrap;
-}
-}
