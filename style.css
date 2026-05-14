@@ -525,8 +525,10 @@ span{
 .contact .btn{
   margin-top:2rem;
   width:220px;
+
   align-self:center;
 }
+
 
 /* ================= FOOTER SECTION ================= */
 
@@ -629,6 +631,7 @@ span{
     box-shadow: 0 0 20px rgba(0,255,238,0.2);
 }
 
+
 @media(max-width:768px){
 
     #menu-icon{
@@ -725,3 +728,55 @@ span{
         margin:10px 0;
     }
 }
+
+@media (max-width: 768px) {
+    .timeline-items::before { left: 7px; } /* Move line to the side */
+    .timeline-item { padding-left: 40px !important; text-align: left !important; }
+    .timeline-dot { left: 0; }
+}
+
+@media (max-width: 768px) {
+    /* Make the Testimonials stack like a tower */
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the Services stack like a tower */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the service boxes grow if the text is long */
+    .service-box {
+        height: auto;
+    }
+}
+@media (max-width: 768px) {
+    /* Make the Testimonials stack like a tower */
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the Services stack like a tower */
+    .services-container {
+        grid-template-columns: 1fr;
+    }
+
+    /* Make the service boxes grow if the text is long */
+    .service-box {
+        height: auto;
+    }
+    /* Make the form inputs take up the whole width */
+    .contact form .input-box {
+        width: 100%;
+    }
+
+    /* Make the message box fit perfectly */
+    .contact form textarea {
+        min-width: 100%;
+    }
+}
+
+
+
+
